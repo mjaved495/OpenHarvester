@@ -1,7 +1,7 @@
 # OpenHarvester
 
 
-OpenHarvesters harvest publications metadata from different sources (such as CrossRef, PubMed and DBLP) and identify publications for an author.
+OpenHarvesters harvest publications metadata from different sources (CrossRef, PubMed and DBLP) and identify publications for an author.
 
 # How to Run
 
