@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="savescene.SaveSceneController">
+   <children>
+      <ScrollPane prefHeight="399.0" prefWidth="600.0">
+         <content>
+            <Pane prefHeight="394.0" prefWidth="676.0">
+               <children>
+                  <Button fx:id="saveS2Button" layoutX="583.0" layoutY="345.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="85.0" text="SAVE" />
+                  <CheckBox fx:id="csvChB" layoutX="37.0" layoutY="64.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="116.0" selected="true" text="CSV" />
+                  <CheckBox fx:id="rdfChB" layoutX="37.0" layoutY="167.0" mnemonicParsing="false" text="RDF (VIVO-Model)" />
+                  <CheckBox fx:id="pdfChB" layoutX="37.0" layoutY="90.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="110.0" selected="true" text="PDF" />
+                  <Label layoutX="20.0" layoutY="18.0" prefHeight="23.0" prefWidth="209.0" text="Select Output format(s)" textFill="#791d1d">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="personURITF" disable="true" layoutX="81.0" layoutY="202.0" prefHeight="27.0" prefWidth="341.0" promptText="Enter person URI (required)" />
+                  <Button fx:id="browseS2Button" disable="true" layoutX="594.0" layoutY="236.0" mnemonicParsing="false" text="Browse" />
+                  <TextField fx:id="journalfileTF" disable="true" layoutX="81.0" layoutY="236.0" prefHeight="27.0" prefWidth="509.0" promptText="Select journal mapping file (optional)" />
+                  <CheckBox fx:id="txtChB" layoutX="37.0" layoutY="118.0" mnemonicParsing="false" selected="true" text="TXT" />
+                  <Button fx:id="closeS2Button" layoutX="499.0" layoutY="345.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="75.0" text="Close" />
+                  <Label fx:id="saveLabel" layoutX="585.0" layoutY="375.0" prefHeight="17.0" prefWidth="73.0" textFill="#48b25f" />
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>

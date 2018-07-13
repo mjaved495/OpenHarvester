@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.glyphfont.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="710.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="699.0" prefWidth="1300.0" VBox.vgrow="ALWAYS">
+      <children>
+      <ScrollPane prefHeight="710.0" prefWidth="1300.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <Pane prefHeight="699.0" prefWidth="1275.0" style="-fx-background-color: WHITE;"> <!-- Add FXML id to your pane here -->
+               <children>
+                        <TabPane layoutX="2.0" layoutY="1.0" prefHeight="711.0" prefWidth="1277.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                              <Tab fx:id="homeTab" text="Home">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text fill="#8d2e2e" layoutX="63.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #696969;" text="OpenHarvesters harvest publications metadata from different sources (such as CrossRef, PubMed and DBLP) and identify publications for an author." wrappingWidth="575.6455078125">
+                                             <font>
+                                                <Font name="Apple Symbols" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#8a4f4f" layoutX="35.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OpenHarvester" underline="true" wrappingWidth="227.21875">
+                                             <font>
+                                                <Font name="Ayuthaya" size="28.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#1f3a94" layoutX="63.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It works in two steps:" wrappingWidth="226.21875">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#17308a" layoutX="96.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step 1 (Search Databases): Search Publications (by author last name) in the database of interest. For example, if author's name is &quot;Angela, Poole&quot;, the search string should be &quot;Poole&quot;." wrappingWidth="532.9697265625" />
+                                          <Text layoutX="96.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="** Depending on how common an author's last name is, in most cases the search step may take from 1 minute to 20 minutes (or more)" wrappingWidth="493.7197265625">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#17308a" layoutX="96.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step 2 (Claim Publications):  Claim publications from the downloaded data. For this, a user should record some important information in the author profile, including first name, middle initial, last name and preferably affiliation string. For example, if one is affiliated to Duke University, one may want to add &quot;Duke&quot; in the affiliation list. Adding a co-author in the author profile may also help in identifying correct publications." wrappingWidth="526.9697265625" />
+                                          <Text layoutX="21.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Muhammad Javed (mj495@cornell.edu)" wrappingWidth="296.21875">
+                                             <font>
+                                                <Font name="System Bold Italic" size="11.0" />
+                                             </font>
+                                          </Text>
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                            <Tab fx:id="searchDBTab" text="Search Databases">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="searchDatabaseTF" layoutX="132.0" layoutY="73.0" prefHeight="27.0" prefWidth="197.0" style="-fx-border-color: #1d2c7c; -fx-background-color: E9FCFB;" />
+                                          <Label layoutX="15.0" layoutY="78.0" prefHeight="17.0" prefWidth="112.0" text="Search String:" textFill="#1d2c7c" />
+                                          <ComboBox fx:id="searchDatabaseCB" layoutX="131.0" layoutY="31.0" prefHeight="27.0" prefWidth="198.0" promptText="Select Database" style="-fx-border-color: #1d2c7c;" />
+                                          <Label layoutX="16.0" layoutY="36.0" prefHeight="17.0" prefWidth="106.0" text="Select Database:" textFill="#1d2c7c" />
+                                          <Button fx:id="searchDatabaseButton" layoutX="215.0" layoutY="126.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="118.0" text="Start Search" textFill="#1d2c7c" />
+                                          <TextArea fx:id="searchProgressTA" editable="false" layoutX="13.0" layoutY="235.0" prefHeight="423.0" prefWidth="1250.0" wrapText="true" />
+                                          <Label layoutX="14.0" layoutY="202.0" prefHeight="25.0" prefWidth="216.0" text="Progress Display Panel:" textFill="#1d2c7c">
+                                             <font>
+                                                <Font name="Apple Symbols" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="searchlabel" layoutX="133.0" layoutY="102.0" prefHeight="17.0" prefWidth="720.0" textFill="#862727">
+                                             <font>
+                                                <Font name="System Italic" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <ProgressBar fx:id="progressBar" layoutX="888.0" layoutY="173.0" prefHeight="20.0" prefWidth="304.0" progress="0.0" />
+                                          <ProgressIndicator fx:id="progressIndicator" layoutX="1192.0" layoutY="166.0" prefHeight="49.0" prefWidth="49.0" progress="0.0" />
+                                          <Label layoutX="888.0" layoutY="144.0" text="Progress Indicator:" textFill="#1d2c7c">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="claimTab" text="Claim Publications">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="661.0" prefWidth="1277.0">
+                                       <children>
+                                          <TextField fx:id="searchTF" layoutX="989.0" layoutY="10.0" prefHeight="29.0" prefWidth="266.0" promptText="Search" style="-fx-background-color: E9FCFB; -fx-border-color: #808080;" />
+                                          <ListView fx:id="pendingList" layoutX="383.0" layoutY="62.0" prefHeight="250.0" prefWidth="872.0" />
+                                          <Button fx:id="claimButton" layoutX="383.0" layoutY="315.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="92.0" text="Claim" textFill="#1d7c5b" />
+                                          <Button fx:id="rejectButton" layoutX="481.0" layoutY="315.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="88.0" text="Reject" textFill="#b93232" />
+                                          <ComboBox fx:id="datasourceCB" layoutX="896.0" layoutY="315.0" prefHeight="27.0" prefWidth="196.0" promptText="Select Data Source" />
+                                          <Button fx:id="loadDataButton" layoutX="1105.0" layoutY="315.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="152.0" text="Process Publications" />
+                                          <TabPane fx:id="crTabPane" layoutX="380.0" layoutY="347.0" prefHeight="311.0" prefWidth="878.0" tabClosingPolicy="UNAVAILABLE">
+                                            <tabs>
+                                              <Tab fx:id="claimedPubTab" text="Claimed Publications">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="202.0" prefWidth="878.0">
+                                                         <children>
+                                                            <ListView fx:id="claimList" prefHeight="239.0" prefWidth="878.0" />
+                                                            <Button fx:id="unclaimButton" layoutX="7.0" layoutY="244.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="143.0" text="Unclaim Publication" textFill="#1f2220" />
+                                                            <Label layoutX="159.0" layoutY="249.0" text="Claimed publication count:" />
+                                                            <Label fx:id="clicksCount" layoutX="345.0" layoutY="249.0" prefHeight="17.0" prefWidth="36.0" text="0" />
+                                                            <Button fx:id="saveButton" layoutX="814.0" layoutY="244.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="64.0" text="Save" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </Tab>
+                                              <Tab fx:id="rejectTab" text="Rejected Publications">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <ListView fx:id="rejectList" prefHeight="241.0" prefWidth="877.0" />
+                                                            <Button fx:id="unrejectButton" layoutX="6.0" layoutY="245.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="145.0" text="Remove Publication" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                          <TextField fx:id="folderPathTF" layoutX="383.0" layoutY="10.0" prefHeight="27.0" prefWidth="463.0" promptText="Input folder path" style="-fx-background-color: E9FCFB; -fx-border-color: #808080;" />
+                                          <TextField fx:id="fNameTF" layoutX="199.0" layoutY="64.0" prefHeight="27.0" prefWidth="130.0" style="-fx-border-color: #f08080; -fx-background-color: #fff0f5;" />
+                                          <Label layoutX="202.0" layoutY="44.0" prefHeight="17.0" prefWidth="104.0" text="Family Name" textFill="#901919" />
+                                          <Label layoutX="111.0" layoutY="44.0" prefHeight="17.0" prefWidth="88.0" text="Middle Intitial" textFill="#6e1313" />
+                                          <TextField fx:id="mNameTF" layoutX="135.0" layoutY="64.0" prefHeight="27.0" prefWidth="32.0" style="-fx-border-color: #f08080; -fx-background-color: #fff0f5;" />
+                                          <TextField fx:id="gNameTF" layoutX="14.0" layoutY="64.0" prefHeight="27.0" prefWidth="112.0" style="-fx-border-color: #f08080; -fx-background-color: #fff0f5;" />
+                                          <Label layoutX="15.0" layoutY="44.0" prefHeight="17.0" prefWidth="77.0" text="Given Name" textFill="#6e1313" />
+                                          <ListView fx:id="gNameList" layoutX="15.0" layoutY="100.0" prefHeight="66.0" prefWidth="316.0" style="-fx-border-color: #f08080; -fx-background-color: #fff0f5;" />
+                                          <Button fx:id="affiliatiobAddButton" layoutX="288.0" layoutY="180.0" mnemonicParsing="false" text="Add" textFill="#901919" />
+                                          <TextField fx:id="affiliationTF" layoutX="103.0" layoutY="180.0" prefHeight="27.0" prefWidth="177.0" style="-fx-border-color: #f08080; -fx-background-color: #fff0f5;" />
+                                          <Label layoutX="15.0" layoutY="185.0" prefHeight="17.0" prefWidth="81.0" text="Affiliations:" textFill="#901919" />
+                                          <ListView fx:id="affiliationList" layoutX="15.0" layoutY="213.0" prefHeight="72.0" prefWidth="316.0" style="-fx-border-color: #f08080; -fx-background-color: #fff0f5;" />
+                                          <Button fx:id="authorAddButton" layoutX="288.0" layoutY="304.0" mnemonicParsing="false" text="Add" textFill="#901919" />
+                                          <TextField fx:id="authorTF" layoutX="114.0" layoutY="304.0" prefHeight="27.0" prefWidth="162.0" promptText="last name, first name" style="-fx-border-color: #f08080; -fx-background-color: #fff0f5;" />
+                                          <Label layoutX="15.0" layoutY="309.0" prefHeight="17.0" prefWidth="89.0" text="Co-Authors:" textFill="#901919" />
+                                          <ListView fx:id="authorList" layoutX="16.0" layoutY="336.0" prefHeight="72.0" prefWidth="316.0" style="-fx-border-color: #f08080; -fx-background-color: #fff0f5;" />
+                                          <TextField fx:id="startYearTF" disable="true" editable="false" layoutX="95.0" layoutY="428.0" prefHeight="27.0" prefWidth="236.0" style="-fx-border-color: #f08080;" />
+                                          <Label disable="true" layoutX="17.0" layoutY="433.0" prefHeight="17.0" prefWidth="74.0" text="Start Year:" textFill="#5b1818" />
+                                          <TextField fx:id="idTF" disable="true" editable="false" layoutX="96.0" layoutY="472.0" prefHeight="27.0" prefWidth="236.0" style="-fx-border-color: #f08080;" />
+                                          <Label disable="true" layoutX="16.0" layoutY="477.0" prefHeight="17.0" prefWidth="76.0" text="Identifiers:" />
+                                          <Button disable="true" layoutX="288.0" layoutY="508.0" mnemonicParsing="false" text="Add" />
+                                          <ComboBox fx:id="idTypeCB" disable="true" layoutX="90.0" layoutY="508.0" prefHeight="27.0" prefWidth="196.0" promptText="Select Identifier Type" />
+                                          <ListView fx:id="idList" layoutX="16.0" layoutY="546.0" prefHeight="52.0" prefWidth="316.0" />
+                                          <Button fx:id="applyButton" defaultButton="true" layoutX="255.0" layoutY="619.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="76.0" text="Apply" textFill="#901919" />
+                                          <Button fx:id="processButton" disable="true" layoutX="93.0" layoutY="619.0" mnemonicParsing="false" text="Process" />
+                                          <Button fx:id="clearButton" layoutX="17.0" layoutY="619.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="65.0" text="Clear" textFill="#dd0d0d" />
+                                          <Label fx:id="userlabel" layoutX="15.0" layoutY="9.0" prefHeight="29.0" prefWidth="244.0" text="AUTHOR PROFILE SETTINGS:" textFill="#901919">
+                                             <font>
+                                                <Font name="Apple Symbols" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="383.0" layoutY="38.0" prefHeight="23.0" prefWidth="334.0" text="List of ranked pending publications:" textFill="#0d4286">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="progressMonitor" layoutX="991.0" layoutY="44.0" prefHeight="17.0" prefWidth="261.0" text="- " />
+                                          <Button fx:id="inputFolderButton" layoutX="851.0" layoutY="10.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="99.0" text="Browse" textFill="#1ca8d7" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+            </children>
+            </Pane>
+            </content>
+            </ScrollPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
