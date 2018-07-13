@@ -9,11 +9,11 @@ Latest Version of the Jar file -   PH-07132018.jar
 
 # How to Run
 
-Download the github repo in a prefered location and unzip it. The project contains the runnable jar file.
+Download the github repo in a preferred location and unzip it. The project contains the runnable jar file.
 
 Use following command to run the jar file.
 ```
-java -jar <<latest jar filename>> <<path to the jar file folder>>
+java -jar <<latest jar filename>> <<path to the github repo folder>>
 ```
 
 For example, 
