@@ -4,21 +4,21 @@
 OpenHarvesters harvest publications metadata from different sources (CrossRef, PubMed and DBLP) and identify publications for an author.
 
 ``` 
-Latest Version of the Jar file -   PH-07092018.jar (replace jar file in zip folder if you would like to use the latest version)
+Latest Version of the Jar file -   PH-07132018.jar
 ```
 
 # How to Run
 
-Download the zip file in a prefered location and unzip it. The zip file contains the runnable jar file.
+Download the github repo in a prefered location and unzip it. The project contains the runnable jar file.
 
 Use following command to run the jar file.
 ```
-java -jar PH.jar <<path to the jar file folder>>
+java -jar <<latest jar filename>> <<path to the jar file folder>>
 ```
 
 For example, 
 ```
-java -jar PH.jar /Users/mj125/Documents/OpenHarvester/
+java -jar PH-07132018.jar /Users/mj125/Documents/OpenHarvester/
 ```
 
 The program works in two separate steps.
