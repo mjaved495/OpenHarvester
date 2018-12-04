@@ -1,7 +1,7 @@
 # OpenHarvester
 
 
-OpenHarvesters harvest publications metadata from different sources (CrossRef, PubMed and DBLP) and identify publications for an author.
+OpenHarvester harvest publications metadata from different sources (CrossRef, PubMed and DBLP) and identify publications for an author.
 
 ``` 
 Latest Version of the Jar file -   PH-07182018.jar
