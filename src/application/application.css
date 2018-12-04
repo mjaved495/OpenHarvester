@@ -1,0 +1,69 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+.tab-pane .tab
+{
+    -fx-background-color: #e6e6e6;
+}
+
+/* 
+ .tab-pane .tab:selected
+{
+    -fx-background-color: #3c3c3c;
+}
+*/
+
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #00bfff;
+}
+
+.list-cell:hover {
+    -fx-control-inner-background: #ff8c00;
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, 50%);
+}
+
+/*
+#pendingList .list-cell:hover {
+    -fx-control-inner-background: #ff8c00;
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, 50%);
+}
+
+#claimList .list-cell:hover {
+    -fx-control-inner-background: #ff8c00;
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, 50%);
+}
+
+#rejectList .list-cell:hover {
+    -fx-control-inner-background: #ff8c00;
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, 50%);
+}
+*/
+
+#searchProgressTA {
+	-fx-control-inner-background: #e6e6e6;
+}
+
+.button:hover{
+	-fx-background-color: linear-gradient(#d3d3d3, #808080);
+}
+
